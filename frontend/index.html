@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝑰𝑵𝑫𝑰𝑨𝑵 বাঙালী 𝑹𝑰𝑫𝑬𝑹𝑺 | Official Pack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syncopate:wght@400;700&family=Noto+Serif+Bengali:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ===== BASE ========================================= */
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0A0A0F;
+            color: #FFFFFF;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, .heading-font { font-family: 'Syncopate', sans-serif; }
+        .bengali-font { font-family: 'Noto Serif Bengali', serif; }
+        .hindi-font { font-family: 'Noto Sans Devanagari', sans-serif; }
+
+        /* ===== GLASS ======================================== */
+        .glass {
+            background: rgba(18, 18, 26, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== TEXT EFFECTS ================================= */
+        .text-glow { text-shadow: 0 0 15px rgba(225, 29, 72, 0.6); }
+        .brand-text-glow { text-shadow: 0 0 20px rgba(225,29,72,0.5),0 0 45px rgba(225,29,72,0.3),0 0 80px rgba(225,29,72,0.1); }
+        .brand-shimmer {
+            background: linear-gradient(90deg,#e11d48 0%,#ffffff 50%,#e11d48 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+        .premium-glow-animation { animation: brand-pulse 4s ease-in-out infinite; }
+        @keyframes brand-pulse {
+            0%,100% { text-shadow: 0 0 20px rgba(225,29,72,0.4); }
+            50% { text-shadow: 0 0 40px rgba(225,29,72,0.7),0 0 10px rgba(255,255,255,0.3); }
+        }
+
+        /* ===== SCROLLBARS =================================== */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e11d48; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #f43f5e; }
+
+        /* ===== PERFORMANCE ================================== */
+        .accelerated { transform: translateZ(0); backface-visibility: hidden; perspective: 1000px; }
+        section { content-visibility: auto; contain-intrinsic-size: 1px 1000px; }
+
+        /* ===== SNOWFALL ===================================== */
+        @keyframes snowfall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh) translateX(20px); opacity: 0; }
+        }
+        .snowflake { position: fixed; color: white; font-size: 10px; z-index: -1; user-select: none; pointer-events: none; animation: snowfall linear infinite; will-change: transform; }
+
+        /* ===== REQUIRED FIELD ASTERISK ===================== */
+        .required-star { color: #e11d48; margin-left: 2px; font-weight: 900; }
+
+        /* ===== THEME: DARK (DEFAULT) ======================== */
+        html, html[data-theme='dark'] {
+            --bg-primary: #0A0A0F;
+            --bg-secondary: rgba(18,18,26,0.7);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255,255,255,0.6);
+            --text-muted: rgba(255,255,255,0.3);
+            --border-color: rgba(255,255,255,0.1);
+            --glass-bg: rgba(18,18,26,0.7);
+            --card-bg: rgba(255,255,255,0.03);
+        }
+
+        /* ===== THEME: LIGHT — Professional & Vibrant ======= */
+        html[data-theme='light'] {
+            --bg-primary: #FAFAF8;
+            --bg-secondary: rgba(255,255,255,0.85);
+            --text-primary: #0F0F14;
+            --text-secondary: #3D3D4E;
+            --text-muted: #7A7A8F;
+            --border-color: rgba(0,0,0,0.1);
+            --glass-bg: rgba(255,255,255,0.82);
+            --card-bg: rgba(0,0,0,0.02);
+            background-color: #FAFAF8 !important;
+            color: #0F0F14 !important;
+        }
+        html[data-theme='light'] body {
+            background-color: #FAFAF8;
+            color: #0F0F14;
+        }
+        html[data-theme='light'] .glass {
+            background: rgba(255,255,255,0.82);
+            border-color: rgba(0,0,0,0.1);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        /* Text contrast overrides for light mode */
+        html[data-theme='light'] .text-white { color: #0F0F14 !important; }
+        html[data-theme='light'] .text-neutral-400 { color: #4A4A5A !important; }
+        html[data-theme='light'] .text-neutral-500 { color: #5A5A6A !important; }
+        html[data-theme='light'] .text-neutral-600 { color: #6A6A7A !important; }
+        html[data-theme='light'] .text-neutral-700 { color: #7A7A8A !important; }
+        html[data-theme='light'] .text-neutral-800 { color: #2A2A3A !important; }
+        html[data-theme='light'] .text-neutral-300 { color: #3A3A4A !important; }
+        html[data-theme='light'] .text-neutral-200 { color: #2A2A3A !important; }
+        html[data-theme='light'] .bg-neutral-900 { background-color: #F0EFEC !important; }
+        html[data-theme='light'] .bg-neutral-800 { background-color: #E8E7E4 !important; }
+        html[data-theme='light'] input:focus, html[data-theme='light'] textarea:focus { 
+            box-shadow: 0 0 0 2px rgba(225,29,72,0.2); 
+        }
+        html[data-theme='light'] img, html[data-theme='light'] video, html[data-theme='light'] canvas { filter: none; }
+
+        /* ===== THEME: EYE CARE — Warm & Gentle ============= */
+        html[data-theme='eye-care'] {
+            --bg-primary: #16140F;
+            --text-primary: #F5E6CC;
+            background-color: #16140F !important;
+            color: #F5E6CC !important;
+        }
+        html[data-theme='eye-care'] body { background-color: #16140F; color: #F5E6CC; }
+        html[data-theme='eye-care'] .glass { background: rgba(28,24,16,0.8); border-color: rgba(245,220,150,0.12); }
+        html[data-theme='eye-care'] .text-white { color: #F5E6CC !important; }
+        html[data-theme='eye-care'] .text-neutral-400 { color: #C8B890 !important; }
+        html[data-theme='eye-care'] .text-neutral-500 { color: #A89870 !important; }
+        html[data-theme='eye-care'] .text-neutral-600 { color: #8A7A58 !important; }
+        html[data-theme='eye-care'] .bg-neutral-900 { background-color: #201C14 !important; }
+        html[data-theme='eye-care'] img, html[data-theme='eye-care'] video { filter: sepia(0.15) brightness(0.95); }
+
+        /* Smooth transition between themes */
+        html { transition: color 0.3s ease, background-color 0.3s ease; }
+
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
