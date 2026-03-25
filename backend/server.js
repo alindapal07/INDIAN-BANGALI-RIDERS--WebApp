@@ -47,7 +47,9 @@ app.use('/api/reviews', require('./routes/reviews.routes'));
 
 // Attach io instance to app for controllers
 app.set('io', io);
-
+app.get("/", (req, res) => {
+  res.send("Indian Bangali Riders Backend Running 🚀");
+});
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'IBR_BACKEND_ONLINE', timestamp: Date.now() }));
 
