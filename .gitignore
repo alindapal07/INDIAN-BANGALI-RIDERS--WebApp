@@ -11,6 +11,7 @@ frontend/dist/
 dist/
 dist-ssr/
 *.local
+frontend/.vite/
 
 # Logs
 npm-debug.log*
